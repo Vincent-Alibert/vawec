@@ -121,7 +121,7 @@ add_action( 'widgets_init', 'vawec_widgets_init' );
  */
 function vawec_scripts() {
 	wp_enqueue_style( 'vawec-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'home',  get_template_directory_uri() .'/public/styles/styles.css',array(),'1.0.0');
+	wp_enqueue_style( 'home',  get_template_directory_uri() .'/public/css/app.css',array(),'1.0.0');
 
 	// wp_enqueue_script( 'vawec-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

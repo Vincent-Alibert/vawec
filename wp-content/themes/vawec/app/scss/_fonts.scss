@@ -1,14 +1,14 @@
 // FONTS //
 
 // Lato
- @include font-face('latoR', '/public/fonts/Lato-Regular', normal, normal);
- @include font-face('latoL', '/public/fonts/Lato-Light', 300, normal);
- @include font-face('latoLI', '/public/fonts/Lato-LightItalic',300 , italic);
- @include font-face('latoI', '/public/fonts/Lato-Italic', normal, italic);
- @include font-face('latoM', '/public/fonts/Lato-Medium', 500, normal);
- @include font-face('latoH', '/public/fonts/Lato-Hairline', 300, normal);
- @include font-face('latoHI', '/public/fonts/Lato-HairlineItalic', 300, italic);
- @include font-face('latoBO', '/public/fonts/Lato-Bold', bold, normal);
- @include font-face('latoBOI', '/public/fonts/Lato-BoldItalic', bold, italic);
- @include font-face('latoBL', '/public/fonts/Lato-Black', 900, normal);
- @include font-face('latoBLI', '/public/fonts/Lato-BlackItalic', 900, italic);
+ @include font-face('latoR', './../fonts/Lato-Regular', normal, normal);
+ @include font-face('latoL', './../fonts/Lato-Light', 300, normal);
+ @include font-face('latoLI', './../fonts/Lato-LightItalic',300 , italic);
+ @include font-face('latoI', './../fonts/Lato-Italic', normal, italic);
+ @include font-face('latoM', './../fonts/Lato-Medium', 500, normal);
+ @include font-face('latoH', './../fonts/Lato-Hairline', 300, normal);
+ @include font-face('latoHI', './../fonts/Lato-HairlineItalic', 300, italic);
+ @include font-face('latoBO', './../fonts/Lato-Bold', bold, normal);
+ @include font-face('latoBOI', './../fonts/Lato-BoldItalic', bold, italic);
+ @include font-face('latoBL', './../fonts/Lato-Black', 900, normal);
+ @include font-face('latoBLI', './../fonts/Lato-BlackItalic', 900, italic);

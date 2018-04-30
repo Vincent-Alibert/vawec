@@ -6,15 +6,16 @@ exports.files = {
       'js/app.js': /^app/
     }
   },
-  stylesheets: { joinTo: {
-    'css/app.css': /^app/
+  stylesheets: {
+    joinTo: {
+      'css/app.css': /^app/
+    }
   }
-}
 };
 
 exports.notifications = false;
 exports.watcher = {
- usePolling: true
+  usePolling: true
 };
 
 // Plugins config
@@ -22,11 +23,11 @@ exports.plugins = {
   sass: {
     options: {
       includePaths: [
-      './node_modules/bootstrap/scss/',
-      './node_modules/animate-scss/', 
-      './node_modules/hamburgers/_sass/hamburgers/'
-       ],
-      precision: 8
+        './node_modules/bootstrap/scss/',
+        './node_modules//animate-sass/',
+        './node_modules/hamburgers/_sass/hamburgers/'
+      ],
+      precision: 8,
     }
   },
   imagemin: {
@@ -40,7 +41,7 @@ exports.plugins = {
   },
   postcss: {
     processors: [
-    require('autoprefixer')()
+      require('autoprefixer')
     ]
   }
 };
