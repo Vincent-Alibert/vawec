@@ -1,0 +1,16 @@
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+
+}
+
+/**
+ * Firefox specific rule
+ */
+ @-moz-document url-prefix() {
+ 	body {
+ 		font-weight: lighter !important;
+ 	}
+ }
+

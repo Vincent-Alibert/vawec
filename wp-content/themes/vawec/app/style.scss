@@ -1,0 +1,39 @@
+// Theme
+@import './scss/theme';
+
+//lib
+@import "./scss/external/bootstrap/var_overrides.scss";
+@import "./scss/external/fancybox/jquery.fancybox.scss";
+@import "bootstrap.scss";
+@import "hamburgers.scss";
+
+// Animate.scss (SASS)
+@import 'animate.scss';
+
+// Mixins
+@import './scss/mixins/font-family';
+@import './scss/mixins/mixins';
+@import './scss/mixins/iconfont';
+
+
+// Fonts
+@import './scss/fonts';
+
+// Common Styles
+@import './scss/common';
+
+// Reset Fixes
+@import './scss/reset';
+
+
+// Import specific pages style
+@import './scss/header/header';
+@import './scss/interior/interior';
+@import './scss/footer/footer';
+
+// Home
+@import './scss/home/style';
+
+// lib slider slick
+// @import "./scss/external/slick/slick-theme";
+// @import "./scss/external/slick/slick";
