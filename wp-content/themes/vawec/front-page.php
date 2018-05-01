@@ -1,17 +1,15 @@
 <?php get_header(); ?>
 
-<section id="home">
+<section id="home-header">
 
 <div class="overlay"></div><div class="gradient-overlay"></div>
 
 <div class="home-content-table">		   
-
-    <div class="home-content-tablecell">
+    <div class="container home-content-tablecell">
         <div class="row">
-            <div class="col-twelve">		   			
+            <div class="home-header-content">		   			
                    <div class="home-bottom-text">
-
-                       <h3 class="animate-intro">Hello, World.</h3>
+                       <div class="home-bottom-text-hello animate-intro">Hello, World.</div>
                        <h1 class="animate-intro">
                      I am Jonathan Smith. <br>
                      Graphic &amp; UI/UX Designer <br>
@@ -25,7 +23,7 @@
                      </ul>
 
                    </div> <!-- end home-bottom-text -->
-            </div> <!-- end col-twelve --> 
+            </div> <!-- end home-header-content --> 
         </div> <!-- end row --> 
     </div> <!-- end home-content-tablecell --> 		   
  </div> <!-- end home-content-table -->
