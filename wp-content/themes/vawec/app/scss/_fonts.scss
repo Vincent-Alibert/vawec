@@ -1,14 +1,10 @@
 // FONTS //
-
-// Lato
- @include font-face('latoR', './../fonts/Lato-Regular', normal, normal);
- @include font-face('latoL', './../fonts/Lato-Light', 300, normal);
- @include font-face('latoLI', './../fonts/Lato-LightItalic',300 , italic);
- @include font-face('latoI', './../fonts/Lato-Italic', normal, italic);
- @include font-face('latoM', './../fonts/Lato-Medium', 500, normal);
- @include font-face('latoH', './../fonts/Lato-Hairline', 300, normal);
- @include font-face('latoHI', './../fonts/Lato-HairlineItalic', 300, italic);
- @include font-face('latoBO', './../fonts/Lato-Bold', bold, normal);
- @include font-face('latoBOI', './../fonts/Lato-BoldItalic', bold, italic);
- @include font-face('latoBL', './../fonts/Lato-Black', 900, normal);
- @include font-face('latoBLI', './../fonts/Lato-BlackItalic', 900, italic);
+// Libre baskerville
+@include font-face('Libre BaskervilleR', './../fonts/LibreBaskerville-Regular', normal, normal);
+@include font-face('Libre BaskervilleI', './../fonts/LibreBaskerville-Italic', normal, italic);
+@include font-face('Libre BaskervilleB', './../fonts/LibreBaskerville-Bold', normal, bold); 
+// Monserrat
+@include font-face('MontserratR', './../fonts/Montserrat-Regular', normal, normal);
+@include font-face('MontserratB', './../fonts/Montserrat-Bold', normal, bold);
+//lg
+@include font-face('lg', './../fonts/lg', normal, normal);

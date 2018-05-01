@@ -1,11 +1,6 @@
-@mixin latoR(){font-family: 'latoR';};
-@mixin latoL(){font-family: 'latoL';}; 
-@mixin latoLI(){font-family: 'latoLI';};
-@mixin latoI(){font-family: 'latoI';};
-@mixin latoM(){font-family: 'latoM';};
-@mixin latoH(){font-family: 'latoH';};
-@mixin latoHI(){font-family: 'latoHI';};
-@mixin latoBO(){font-family: 'latoBO';}; 
-@mixin latoBOI(){font-family: 'latoBOI';};
-@mixin latoBL(){font-family: 'latoBL';}; 
-@mixin latoBLI(){font-family: 'latoBLI';};
+@mixin lbR(){font-family: 'Libre BaskervilleR';};
+@mixin lbI(){font-family: 'Libre BaskervilleI';}; 
+@mixin lbB(){font-family: 'Libre BaskervilleB';};
+@mixin montR(){font-family: 'MontserratR';};
+@mixin montB(){font-family: 'MontserratB';};
+@mixin lg(){font-family: 'lg';};

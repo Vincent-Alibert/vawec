@@ -4,4 +4,47 @@
 	}
 }
 
+html {
+	@include font-size(10px);
+}
+@media only screen and (max-width: map-get($grid-breakpoints, lg-1) ) {
+	html {
+		@include font-size(9.375px);
+	}
+}
+@media only screen and (max-width: map-get($grid-breakpoints, md) ) {
+	html {
+		@include font-size(10px);
+	}
+}
+@media only screen and (max-width: map-get($grid-breakpoints, xs-1) ) {
+	html {
+		@include font-size(9.375px);
+	}
+}
 
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #050505;
+	@include lbR();
+	@include font-size(26px);
+	@include line-height (49);
+	color: $mainBlue;
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: $orange;
+	@include transition (all 0.3s ease-in-out);
+}
+
+a:hover,
+a:focus {
+	color: $black;
+}
