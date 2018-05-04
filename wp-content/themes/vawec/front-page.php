@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 <section id="home-header">
-
-<div class="overlay"></div><div class="gradient-overlay"></div>
-
 <div class="home-content-table">		   
     <div class="container home-content-tablecell">
         <div class="row">
@@ -11,15 +8,15 @@
                    <div class="home-bottom-text">
                        <div class="home-bottom-text-hello animate-intro">Hello, World.</div>
                        <h1 class="animate-intro">
-                     I am Jonathan Smith. <br>
-                     Graphic &amp; UI/UX Designer <br>
-                     Based in Manila Philippines. 
+                     Je suis Vincent Alibert. <br>
+                     Développeur <br>
+                     basé sur Villefranche de Lauragais, et Castelnaudary. 
                        </h1>	
 
                      <ul class="home-section-links">
-                         <li class="animate-intro">More <a href="#about" class="smoothscroll">About Me</a></li>
-                         <li class="animate-intro">View <a href="#portfolio" class="smoothscroll">My Works</a></li>
-                         <li class="animate-intro">Contact <a href="#contact" class="smoothscroll">By Email</a></li>								
+                         <li class="animate-intro">plus <a href="#about" class="smoothscroll">A mon sujet</a></li>
+                         <li class="animate-intro">Voir <a href="#portfolio" class="smoothscroll">Mes travaux</a></li>
+                         <li class="animate-intro">Contact <a href="#contact" class="smoothscroll">Par mail</a></li>								
                      </ul>
 
                    </div> <!-- end home-bottom-text -->
@@ -29,7 +26,7 @@
  </div> <!-- end home-content-table -->
 
  <a href="#about" class="scroll-icon smoothscroll">		
-    <span class="icon-DownArrow"></span>
+    <i class="va-ion-ios-arrow-thin-down"></i>
  </a>	
 
 </section> <!-- end home -->
@@ -37,92 +34,79 @@
 
 <!-- about
 ================================================== -->
-<section id="about">
+<section id="home-about">
 
-<div class="about-profile-bg"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6" id="about-profile">
+                <div class="row">
+                    <div class="col-12 col-md-8 offset-md-3">
+                        <div class="intro">
+                            <h2 class="animate-this">à Propos</h2>
+                            <h3 class="animate-this">Plus à mon sujet</h3>
 
-<div class="about-wrap">
+                            <p class="lead animate-this">Je pense que si l’on devait me décrire, il faudrait employer des mots comme déterminé, investi, avenant, rigoureux et curieux !</p>					
+                        </div>   		
 
-    <div class="about-profile">
+                        <p class="animate-this">
+                            Suite à une réflexion de ma part sur mon avenir professionnel et étant passionné par l’informatique depuis toujours, je me suis reconverti dans le développement. Acquérir de nouvelles compétences, c’est clairement ce qui me plaît le plus c’est pourquoi je me suis remis aux études c'est dernières années. 	
+                        </p>
 
-        <div class="about-profile-bg"></div>
+                        <p class="animate-this">
+                            Dans le cadre de ma seconde année de BTS, j’ai pu découvrir à travers divers projets, le Java, le JEE ainsi qu’Angular et Node.js en parallèle. C’est language et framework m’ayant beaucoup plus, j’ai approfondi mes compétences sur ces derniers tout au long de mes études.</p>
 
-         <div class="intro">
-             <h3 class="animate-this">About</h3>
-            <h1 class="animate-this">More About Me.</h1>
-
-            <p class="lead animate-this">Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</p>					
-         </div>   		
-
-        <p class="animate-this">
-        Lorem ipsum Nisi officia Duis irure voluptate dolor commodo pariatur occaecat aliquip adipisicing voluptate Ut in qui ea sint occaecat in commodo in in in incididunt ut sunt in Ut Duis in ut ex qui anim cupidatat cupidatat ex in non dolore labore ea amet cillum ea qui dolor nisi sed velit mollit exercitation ex fugiat labore in deserunt culpa laborum culpa anim dolore laboris amet irure mollit proident velit fugiat aute ea elit magna consequat qui officia quis elit Duis dolor esse cupidatat tempor proident voluptate aliqua ex cupidatat do eiusmod veniam irure laborum ut magna nostrud dolore ullamco commodo elit sit magna aliqua laborum veniam officia dolor.	
-        </p>
-
-        <p class="animate-this">Lorem ipsum Minim nisi dolore proident Ut dolor quis deserunt voluptate Ut voluptate enim ut adipisicing fugiat cupidatat nisi adipisicing labore non adipisicing in sit proident. Ut in qui ea sint occaecat in commodo in in in incididunt ut</p>
-
-        <p>
-            <a href="#" class="button full-width animate-this">Contact Me</a>
-            <a href="#" class="button button-primary full-width animate-this">Download CV</a>
-        </p>  			
-
-    </div> <!-- end about-profile  -->
-
-    <div class="about-services">
-
-         <div class="intro">
-            <h3 class="animate-this">Services</h3>
-            <h1 class="animate-this">What I Do.</h1>
-
-            <p class="lead animate-this">Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit laboris sunt magna velit. Ut dolor quis deserunt voluptate.</p>
-        </div>
-
-        <ul class="services">
-            <li class="item-branding animate-this">
-                <div class="icon-wrap">
-                    <i class="icon-RegisteredTrademark"></i>
+                        <p class="animate-this">
+                             A ce jour, j'ai acquis une bonne maitrise de l’ Html, du Css. J’ai aussi de bonnes bases en Java, JEE, Angular, Node.js JavaScript et MySQL. Grâce à ces compétences je peux proposer divers services.</p>
+                        <a href="#" id="btn-contact" class="button animate-this">Contact Me</a>
+                        <a href="#" id="btn-cv" class="button animate-this">Download CV</a>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <h4>Branding</h4>
-                    <p>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.
-                    </p>
-                </div>   					
-            </li>
-            <li class="item-photography animate-this">
-                <div class="icon-wrap">
-                    <i class="icon-Picture"></i>
+            </div>    
+            <div class="col-12 col-md-6" id="about-service">
+                <div class="row">
+                    <div class="col-12 col-md-8 offset-md-1">
+                        <div class="intro">
+                            <h2 class="animate-this">Services</h2>
+                            <h3 class="animate-this">Ce que je peux faire</h3>
+                            <p class="lead animate-this">Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit laboris sunt magna velit. Ut dolor quis deserunt voluptate.</p>
+                        </div>
+                        <ul class="services">
+                            <li class="item-web animate-this">
+                                <div class="icon-wrap">
+                                    <i class="va-ion-social-html5"></i>
+                                </div>
+                                <div class="service-item">
+                                    <h4>Site Web</h4>
+                                    <p>Grâce à mon expérience et mes compétences, je suis crée des sites web responsives, compatibles multiplateform et dynamique.
+                                    </p>
+                                </div>   					
+                            </li>
+                            <li class="item-wordpress animate-this">
+                                <div class="icon-wrap">
+                                    <i class="va-ion-social-wordpress"></i>
+                                </div>
+                                <div class="service-item">
+                                    <h4>Wordpress</h4>
+                                    <p>Afin que vous ayez un site web personnalisé correspondant à votre entreprise, je crée pour vous des thèmes sur mesure.
+                                    </p>
+                                </div>   					
+                            </li>
+                            <li class="item-app animate-this">
+                                <div class="icon-wrap">
+                                    <i class="va-ion-social-angular"></i>
+                                </div>
+                                <div class="service-item">
+                                    <h4>Application</h4>
+                                    <p>Lors de mes études j'ai eu l'occasion de me former sur le framework Angular et Node js. Je peux concevoir pour vous une application web ou mobile.
+                                    </p>
+                                </div>   					
+                            </li>
+                        </ul> 
+                    </div>
                 </div>
-                <div class="service-item">
-                    <h4>Photography</h4>
-                    <p>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.
-                    </p>
-                </div>   					
-            </li>
-            <li class="item-webdesign animate-this">
-                <div class="icon-wrap">
-                    <i class="icon-HTML"></i>
-                </div>
-                <div class="service-item">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.
-                    </p>
-                </div>   					
-            </li>
-            <li class="item-uiux animate-this">
-                <div class="icon-wrap">
-                    <i class="icon-Checked"></i>
-                </div>
-                <div class="service-item">
-                    <h4>UI/UX Design</h4>
-                    <p>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.
-                    </p>
-                </div>   					
-            </li>
-        </ul>   			
-
-    </div> <!-- end about-services  -->   		
-
-</div> <!-- end about-wrap  -->
-
+            </div>
+        </div> <!-- end row -->
+    </div>
 </section> <!-- end about -->
 
 

@@ -6314,7 +6314,7 @@ button.bg-dark:focus {
 .d-inline-block {
   display: inline-block !important; }
 
-.d-block {
+.d-block, #home-about #about-profile a.button {
   display: block !important; }
 
 .d-table {
@@ -7575,7 +7575,7 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important; }
 
-.w-100 {
+.w-100, #home-about #about-profile a.button {
   width: 100% !important; }
 
 .w-auto {
@@ -8973,7 +8973,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center {
+.text-center, #home-about #about-profile a.button {
   text-align: center !important; }
 
 @media (min-width: 400px) {
@@ -14390,36 +14390,14 @@ i {
 *:focus, *:active {
   outline: none; }
 
-html {
-  font-size: 10px;
-  font-size: 0.625rem;
-  height: 100%; }
-
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 9.375px;
-    font-size: 0.58594rem; } }
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
-    font-size: 0.625rem; } }
-
-@media only screen and (max-width: 400px) {
-  html {
-    font-size: 9.375px;
-    font-size: 0.58594rem; } }
-
 html,
 body {
   height: 100%; }
 
 body {
   font-family: 'Libre BaskervilleR';
-  font-size: 26px;
-  font-size: 1.625rem;
-  line-height: 49px;
-  line-height: 3.0625rem;
+  font-size: 16px;
+  font-size: 1rem;
   color: #353535;
   margin: 0;
   padding: 0;
@@ -14450,42 +14428,21 @@ html {
 #home-header {
   position: relative;
   background-color: #151515;
-  background-image: url(../img/intro-bg.jpg);
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(10%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.4))), url(../img/intro-bg.jpg);
+  background: linear-gradient(to left, black 0%, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.4) 100%), url(../img/intro-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 804px;
-  position: relative;
-  width: 100%;
-  height: 100%; }
-  #home-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .6;
-    background-color: #000000;
-    z-index: 2; }
-  #home-header .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .2;
-    background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, black), to(transparent));
-    background: linear-gradient(to right, black 0%, black 20%, transparent 100%);
-    z-index: 1; }
+  width: 100%; }
   #home-header .home-content-table {
-    position: relative;
-    top: 45%;
-    z-index: 3; }
+    padding-top: 350px;
+    padding-bottom: 110px; }
   #home-header .home-bottom-text-hello {
     font-family: 'MontserratB';
     font-weight: 700;
-    font-size: 36px;
-    font-size: 2.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     color: rgba(255, 255, 255, 0.35);
     text-transform: uppercase;
     letter-spacing: .15rem;
@@ -14493,14 +14450,14 @@ html {
   #home-header .home-section-links {
     display: inline-block;
     list-style: none;
-    margin: 4.8rem 0 0 0;
+    margin: 80px 0 0 0;
     padding: 0; }
     #home-header .home-section-links li {
       display: inline-block;
       font-family: 'MontserratB';
       font-weight: 400;
-      font-size: 22px;
-      font-size: 1.375rem;
+      font-size: 14px;
+      font-size: 0.875rem;
       text-transform: uppercase;
       letter-spacing: .1rem;
       color: rgba(255, 255, 255, 0.35);
@@ -14508,19 +14465,103 @@ html {
       margin-bottom: .6rem; }
     #home-header .home-section-links a {
       font-family: 'Libre BaskervilleR';
-      font-size: 29px;
-      font-size: 1.8125rem;
+      font-size: 18px;
+      font-size: 1.125rem;
       text-transform: none;
       letter-spacing: 0;
       color: #ffffff;
       margin-left: .3rem; }
+      #home-header .home-section-links a:hover {
+        text-decoration: none; }
   #home-header h1 {
     font-family: 'Libre BaskervilleB';
-    font-size: 85px;
-    font-size: 5.3125rem;
-    line-height: 1.5;
+    font-size: 52px;
+    font-size: 3.25rem;
+    line-height: 1.4;
     color: #ffffff;
     font-weight: 700; }
+  #home-header .scroll-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    width: 60px;
+    height: 48px;
+    font-size: 50px;
+    font-size: 3.125rem;
+    color: #ffffff;
+    z-index: 4; }
+    #home-header .scroll-icon:hover {
+      text-decoration: none; }
+
+#home-about #about {
+  /* fin profile */ }
+  #home-about #about-profile, #home-about #about-service {
+    padding-top: 110px;
+    padding-bottom: 110px; }
+    #home-about #about-profile h2, #home-about #about-service h2 {
+      text-transform: uppercase;
+      color: #4C2405;
+      font-size: 16px;
+      font-size: 1rem;
+      font-family: 'MontserratB';
+      font-weight: 700;
+      letter-spacing: 2px; }
+    #home-about #about-profile h3, #home-about #about-service h3 {
+      font-size: 33px;
+      font-size: 2.0625rem;
+      font-family: 'Libre BaskervilleB';
+      font-weight: 700;
+      color: #151515; }
+    #home-about #about-profile .lead, #home-about #about-service .lead {
+      color: #636363;
+      font-family: 'MontserratR';
+      font-size: 20px;
+      font-size: 1.25rem;
+      font-weight: 400; }
+  #home-about #about-profile {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 235, 235, 0.7)), to(rgba(235, 235, 235, 0.7))), url(../img/profile-bg.jpg);
+    background: linear-gradient(to top, rgba(235, 235, 235, 0.7), rgba(235, 235, 235, 0.7)), url(../img/profile-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #home-about #about-profile a.button {
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      padding: 10px;
+      text-transform: uppercase;
+      font-family: 'MontserratB';
+      letter-spacing: 2px;
+      font-weight: 400; }
+    #home-about #about-profile a#btn-contact {
+      color: #000000;
+      background-color: #808080;
+      border: 1px solid #808080;
+      margin-bottom: 10px; }
+      #home-about #about-profile a#btn-contact:hover {
+        background-color: rgba(128, 128, 128, 0.7);
+        text-decoration: none;
+        border: 1px solid rgba(128, 128, 128, 0.7); }
+    #home-about #about-profile a#btn-cv {
+      color: #ffffff;
+      background-color: #000000;
+      border: 1px solid #000000; }
+      #home-about #about-profile a#btn-cv:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        text-decoration: none; }
+  #home-about #about-service ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    #home-about #about-service ul .icon-wrap, #home-about #about-service ul .service-item {
+      display: inline-block;
+      vertical-align: top; }
+    #home-about #about-service ul .service-item {
+      max-width: 80%;
+      margin-left: 20px; }
+    #home-about #about-service ul i {
+      font-size: 55px;
+      font-size: 3.4375rem; }
+      #home-about #about-service ul i.va-ion-social-angular {
+        margin-right: -13px; }
 
 
 /*# sourceMappingURL=app.css.map*/
