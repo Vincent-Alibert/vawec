@@ -67,6 +67,7 @@
         width: 60px;
         height: 48px;
         @include font-size(50px);
+        @include vertical($duration: 3s, $count: infinite);
         color: $white;
         z-index: 4;
         &:hover {
@@ -77,29 +78,10 @@
 
 #home-about {
     #about {
-        &-profile, &-service {
+        &-profile,
+        &-service {
             padding-top: 110px;
             padding-bottom: 110px;
-            h2 {
-                text-transform: uppercase;
-                color: $brown;
-                @include font-size(16px);
-                @include montB();
-                font-weight: 700;
-                letter-spacing: 2px;
-            }
-            h3 {
-                @include font-size(33px);
-                @include lbB();
-                font-weight: 700;
-                color: $black-2;
-            }
-            .lead {
-                color: $grey;
-                @include montR();
-                @include font-size(20px);
-                font-weight: 400;
-            }
         }
         &-profile {
             background: linear-gradient(to top, rgba(red($greyL), green($greyL), blue($greyL), 0.7), rgba(red($greyL), green($greyL), blue($greyL), 0.7)), url(../img/profile-bg.jpg);
@@ -141,25 +123,153 @@
         }
         /* fin profile */
         &-service {
-            ul{
+            ul {
                 padding: 0;
                 margin: 0;
                 list-style: none;
-                .icon-wrap, .service-item{
+                .icon-wrap,
+                .service-item {
                     display: inline-block;
                     vertical-align: top;
                 }
-                .service-item{
+                .service-item {
                     max-width: 80%;
                     margin-left: 20px;
                 }
-                i{
+                i {
                     @include font-size(55px);
-                    &.va-ion-social-angular{
+                    &.va-ion-social-angular {
                         margin-right: -13px;
                     }
                 }
             }
         }
+    }
+}
+
+/* Portfolio section styles
+/* ========================================== */
+
+#home-portfolio {
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 150px;
+    background: $greyL;
+    .intro {
+        margin-bottom: 100px;
+        h2 {
+            @include font-size(20px);
+        }
+        h3 {
+            @include font-size(48px);
+        }
+        @include position(relative);
+        &:after {
+            content: "";
+            @include position(absolute, $bottom: -45px);
+            width: 35%;
+            height: 1px;
+            background-color: $grey;
+        }
+    }
+    .portfolio-thumb {
+        @include position(relative);
+        overflow: hidden;
+        margin: 0;
+        .portfolio-overlay {
+            background: $black-2;
+            @include position (absolute, $top: 0, $right:0, $bottom:0, $left:0);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            @include transition(0.4s);
+            .portfolio-item {
+                text-align: center;
+                padding: 30% 20px 20px;
+            }
+            .fa {
+                background: $white;
+                border-radius: 100px;
+                color: $black-2;
+                @include font-size(20px);
+                display: inline-block;
+                width: 3.5rem;
+                height: 3.5rem;
+                line-height: 3.5rem;
+                text-align: center;
+                text-decoration: none;
+                margin-bottom: 20px;
+            }
+            h2 {
+                color: $white;
+                text-transform: uppercase;
+                @include montB();
+                @include font-size(20px);
+            }
+        }
+        &:hover .portfolio-overlay {
+            opacity: 0.9;
+        }
+    }
+    /*filter css*/
+    .filter-wrapper {
+        width: 100%;
+        margin-bottom: 32px;
+        overflow: hidden;
+        padding: 0;
+        margin-left: 0;
+        li {
+            display: inline-block;
+            margin: 4px;
+            a {
+                color: $black;
+                @include font-size(12px);
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                padding: 8px 16px;
+                margin-right: 2px;
+                margin-left: 2px;
+                text-transform: uppercase;
+                display: block;
+                text-decoration: none;
+                @include transition(0.4s);
+                background: transparent;
+                border: 1px solid $black
+            }
+            a:active {
+                background: $black !important;
+            }
+            a:hover,
+            a:focus {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+    /*isotope box css*/
+    .iso-box-section {
+        width: 100%;
+    }
+    .iso-box-wrapper {
+        width: 100%;
+        padding: 0;
+        @include position(relative);
+        margin: 0 auto;
+    }
+    .iso-box {
+        @include position(relative);
+        min-height: 50px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    .iso-box>a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .fluid-img {
+        width: 100%;
+        display: block;
     }
 }

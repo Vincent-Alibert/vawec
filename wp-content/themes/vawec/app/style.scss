@@ -11,7 +11,8 @@
 @import "hamburgers.scss";
 
 // Animate.scss (SASS)
-@import 'animate.scss';
+@import 'properties';
+@import 'fading-entrances/fadeIn';
 
 // Mixins
 @import './scss/mixins/font-family';

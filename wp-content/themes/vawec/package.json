@@ -13,10 +13,10 @@
     "@fancyapps/fancybox": "^3.2.5",
     "bootstrap": "^4.0.0",
     "node-sass": "~4.9.0",
-    "sass": "^1.3.0"
+    "sass": "^1.3.0",
+    "scss-animate": "0.0.2"
   },
   "devDependencies": {
-    "animate-sass": "^0.8.2",
     "autoprefixer": "^7.1.4",
     "brunch": "^2.10.12",
     "clean-css-brunch": "^2",

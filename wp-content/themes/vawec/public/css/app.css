@@ -1222,7 +1222,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid {
+.img-fluid, img {
   max-width: 100%;
   height: auto; }
 
@@ -1325,7 +1325,7 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, #home-header .home-header-content, .col-11, .col-12, .col,
+.col-1, footer .social a, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, #home-header .home-header-content, .col-11, .col-12, .col,
 .col-auto, .col-xs-1-1, .col-xs-1-2, .col-xs-1-3, .col-xs-1-4, .col-xs-1-5, .col-xs-1-6, .col-xs-1-7, .col-xs-1-8, .col-xs-1-9, .col-xs-1-10, .col-xs-1-11, .col-xs-1-12, .col-xs-1,
 .col-xs-1-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -1354,7 +1354,7 @@ pre {
   width: auto;
   max-width: none; }
 
-.col-1 {
+.col-1, footer .social a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 8.33333%;
           flex: 0 0 8.33333%;
@@ -8973,7 +8973,7 @@ button.bg-dark:focus {
 .text-right {
   text-align: right !important; }
 
-.text-center, #home-about #about-profile a.button {
+.text-center, footer .row, #home-about #about-profile a.button {
   text-align: center !important; }
 
 @media (min-width: 400px) {
@@ -10227,31 +10227,24 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg); }
 
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-Copyright (c) 2015 Daniel Eden
-*/
-body {
-  -webkit-backface-visibility: hidden; }
-
-.animated {
-  -webkit-animation-duration: calc( 1s);
-  animation-duration: calc( 1s);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-  .animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; }
-  .animated.hinge {
-    -webkit-animation-duration: calc( 1s * 2);
-    animation-duration: calc( 1s * 2); }
-  .animated.bounceIn, .animated.bounceOut {
-    -webkit-animation-duration: calc( 1s * 0.75);
-    animation-duration: calc( 1s * 0.75); }
-  .animated.flipOutX, .animated.flipOutY {
-    -webkit-animation-duration: calc( 1s * 0.75);
-    animation-duration: calc( 1s * 0.75); }
+/**
+ * $count: Determina o número de vezes que a animação vai se repetir. Para deixar a animação repetindo infinitamente, informe o valor 'infinite'. Default: 1
+ * $duration: Quanto tempo, em segundos (s) ou milisegundos (ms), durará um ciclo da animação. Default: 1s
+ * $delay: Define a partir de quanto tempo a animação vai se iniciar. Default: 0
+ * $function: Forma como a animação progride no tempo. Default: ease
+ * $fill: Especifica como uma animação CSS deve aplicar estilos ao seu destino antes e depois que ele está sendo executado. Default: both
+ * $visibility: Determina se deve ser exibido ou não a parte de trás do elemento para o usuário. Default: hidden
+ */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @-webkit-keyframes loader {
   0% {
@@ -10274,6 +10267,34 @@ body {
   100% {
     -webkit-transform: scaleY(0.6);
     transform: scaleY(0.6); } }
+
+@-webkit-keyframes vertical {
+  0%,
+  60%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  40% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+
+@keyframes vertical {
+  0%,
+  60%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  40% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
 
 @font-face {
   font-family: 'vawec';
@@ -14403,15 +14424,37 @@ body {
   padding: 0;
   text-rendering: optimizeLegibility; }
 
-a,
-a:visited {
+a {
   color: #f0a359;
-  -webkit-transition: all all 0.3s ease-in-out ease-in-out;
-  transition: all all 0.3s ease-in-out ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a:visited {
+    color: #f0a359; }
+  a:hover, a:focus {
+    color: #000000; }
 
-a:hover,
-a:focus {
-  color: #000000; }
+.intro h2 {
+  text-transform: uppercase;
+  color: #4C2405;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: 'MontserratB';
+  font-weight: 700;
+  letter-spacing: 2px; }
+
+.intro h3 {
+  font-size: 33px;
+  font-size: 2.0625rem;
+  font-family: 'Libre BaskervilleB';
+  font-weight: 700;
+  color: #151515; }
+
+.intro .lead {
+  color: #636363;
+  font-family: 'MontserratR';
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400; }
 
 html {
   -moz-osx-font-smoothing: grayscale;
@@ -14424,6 +14467,27 @@ html {
 @-moz-document url-prefix() {
   body {
     font-weight: lighter !important; } }
+
+footer {
+  padding: 42px;
+  color: #ffffff;
+  background-color: #000000; }
+  footer h2 {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    font-family: 'Libre BaskervilleB';
+    font-weight: 700; }
+  footer .social {
+    margin-bottom: 50px; }
+    footer .social a {
+      color: #ffffff;
+      font-size: 50px;
+      font-size: 3.125rem; }
+  footer span {
+    color: #ffffff;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: 'MontserratR'; }
 
 #home-header {
   position: relative;
@@ -14488,6 +14552,20 @@ html {
     height: 48px;
     font-size: 50px;
     font-size: 3.125rem;
+    -webkit-animation-name: vertical;
+            animation-name: vertical;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     color: #ffffff;
     z-index: 4; }
     #home-header .scroll-icon:hover {
@@ -14498,26 +14576,6 @@ html {
   #home-about #about-profile, #home-about #about-service {
     padding-top: 110px;
     padding-bottom: 110px; }
-    #home-about #about-profile h2, #home-about #about-service h2 {
-      text-transform: uppercase;
-      color: #4C2405;
-      font-size: 16px;
-      font-size: 1rem;
-      font-family: 'MontserratB';
-      font-weight: 700;
-      letter-spacing: 2px; }
-    #home-about #about-profile h3, #home-about #about-service h3 {
-      font-size: 33px;
-      font-size: 2.0625rem;
-      font-family: 'Libre BaskervilleB';
-      font-weight: 700;
-      color: #151515; }
-    #home-about #about-profile .lead, #home-about #about-service .lead {
-      color: #636363;
-      font-family: 'MontserratR';
-      font-size: 20px;
-      font-size: 1.25rem;
-      font-weight: 400; }
   #home-about #about-profile {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 235, 235, 0.7)), to(rgba(235, 235, 235, 0.7))), url(../img/profile-bg.jpg);
     background: linear-gradient(to top, rgba(235, 235, 235, 0.7), rgba(235, 235, 235, 0.7)), url(../img/profile-bg.jpg);
@@ -14551,7 +14609,8 @@ html {
     padding: 0;
     margin: 0;
     list-style: none; }
-    #home-about #about-service ul .icon-wrap, #home-about #about-service ul .service-item {
+    #home-about #about-service ul .icon-wrap,
+    #home-about #about-service ul .service-item {
       display: inline-block;
       vertical-align: top; }
     #home-about #about-service ul .service-item {
@@ -14562,6 +14621,123 @@ html {
       font-size: 3.4375rem; }
       #home-about #about-service ul i.va-ion-social-angular {
         margin-right: -13px; }
+
+/* Portfolio section styles
+/* ========================================== */
+#home-portfolio {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 150px;
+  background: #EBEBEB;
+  /*filter css*/
+  /*isotope box css*/ }
+  #home-portfolio .intro {
+    margin-bottom: 100px;
+    position: relative; }
+    #home-portfolio .intro h2 {
+      font-size: 20px;
+      font-size: 1.25rem; }
+    #home-portfolio .intro h3 {
+      font-size: 48px;
+      font-size: 3rem; }
+    #home-portfolio .intro:after {
+      content: "";
+      position: absolute;
+      bottom: -45px;
+      width: 35%;
+      height: 1px;
+      background-color: #636363; }
+  #home-portfolio .portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+    margin: 0; }
+    #home-portfolio .portfolio-thumb .portfolio-overlay {
+      background: #151515;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      #home-portfolio .portfolio-thumb .portfolio-overlay .portfolio-item {
+        text-align: center;
+        padding: 30% 20px 20px; }
+      #home-portfolio .portfolio-thumb .portfolio-overlay .fa {
+        background: #ffffff;
+        border-radius: 100px;
+        color: #151515;
+        font-size: 20px;
+        font-size: 1.25rem;
+        display: inline-block;
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 20px; }
+      #home-portfolio .portfolio-thumb .portfolio-overlay h2 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: 'MontserratB';
+        font-size: 20px;
+        font-size: 1.25rem; }
+    #home-portfolio .portfolio-thumb:hover .portfolio-overlay {
+      opacity: 0.9; }
+  #home-portfolio .filter-wrapper {
+    width: 100%;
+    margin-bottom: 32px;
+    overflow: hidden;
+    padding: 0;
+    margin-left: 0; }
+    #home-portfolio .filter-wrapper li {
+      display: inline-block;
+      margin: 4px; }
+      #home-portfolio .filter-wrapper li a {
+        color: #000000;
+        font-size: 12px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        padding: 8px 16px;
+        margin-right: 2px;
+        margin-left: 2px;
+        text-transform: uppercase;
+        display: block;
+        text-decoration: none;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        background: transparent;
+        border: 1px solid #000000; }
+      #home-portfolio .filter-wrapper li a:active {
+        background: #000000 !important; }
+      #home-portfolio .filter-wrapper li a:hover,
+      #home-portfolio .filter-wrapper li a:focus {
+        background: #000000;
+        color: #ffffff; }
+  #home-portfolio .iso-box-section {
+    width: 100%; }
+  #home-portfolio .iso-box-wrapper {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    margin: 0 auto; }
+  #home-portfolio .iso-box {
+    position: relative;
+    min-height: 50px;
+    overflow: hidden;
+    margin-bottom: 25px; }
+  #home-portfolio .iso-box > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  #home-portfolio .fluid-img {
+    width: 100%;
+    display: block; }
 
 
 /*# sourceMappingURL=app.css.map*/

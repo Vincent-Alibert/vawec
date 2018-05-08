@@ -24,7 +24,7 @@ exports.plugins = {
     options: {
       includePaths: [
         './node_modules/bootstrap/scss/',
-        './node_modules//animate-sass/',
+        './node_modules/scss-animate/',
         './node_modules/hamburgers/_sass/hamburgers/'
       ],
       precision: 8,

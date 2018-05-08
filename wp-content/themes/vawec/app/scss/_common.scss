@@ -4,8 +4,6 @@
 	}
 }
 
-
-
 html,
 body {
 	height: 100%;
@@ -20,13 +18,41 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-a,
-a:visited {
+a {
 	color: $orange;
-	@include transition (all 0.3s ease-in-out);
+	@include transition (0.3s);
+	&:visited {
+		color: $orange;
+	}
+	&:hover,
+	&:focus {
+		color: $black;
+	}
 }
 
-a:hover,
-a:focus {
-	color: $black;
+img {
+	@extend .img-fluid;
+}
+
+.intro {
+	h2 {
+		text-transform: uppercase;
+		color: $brown;
+		@include font-size(16px);
+		@include montB();
+		font-weight: 700;
+		letter-spacing: 2px;
+	}
+	h3 {
+		@include font-size(33px);
+		@include lbB();
+		font-weight: 700;
+		color: $black-2;
+	}
+	.lead {
+		color: $grey;
+		@include montR();
+		@include font-size(20px);
+		font-weight: 400;
+	}
 }
