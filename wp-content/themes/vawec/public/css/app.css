@@ -14426,8 +14426,8 @@ body {
 
 a {
   color: #f0a359;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
   a:visited {
     color: #f0a359; }
   a:hover, a:focus {
@@ -14469,25 +14469,55 @@ html {
     font-weight: lighter !important; } }
 
 footer {
-  padding: 42px;
+  padding: 60px;
   color: #ffffff;
   background-color: #000000; }
   footer h2 {
     font-size: 33px;
     font-size: 2.0625rem;
     font-family: 'Libre BaskervilleB';
-    font-weight: 700; }
+    font-weight: 700;
+    margin-bottom: 30px; }
   footer .social {
     margin-bottom: 50px; }
     footer .social a {
-      color: #ffffff;
       font-size: 50px;
-      font-size: 3.125rem; }
+      font-size: 3.125rem;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      color: #636363; }
+      footer .social a:hover {
+        color: #ffffff;
+        text-decoration: none; }
   footer span {
     color: #ffffff;
     font-size: 16px;
     font-size: 1rem;
     font-family: 'MontserratR'; }
+  footer #go-top {
+    position: fixed;
+    right: 60px;
+    bottom: 50px; }
+    footer #go-top a {
+      position: relative;
+      display: block;
+      color: #636363;
+      height: 60px;
+      width: 60px;
+      background-color: #000000;
+      font-size: 35px;
+      font-size: 2.1875rem;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      footer #go-top a:hover {
+        text-decoration: none;
+        color: #ffffff; }
+    footer #go-top i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
 
 #home-header {
   position: relative;
@@ -14500,7 +14530,7 @@ footer {
   min-height: 804px;
   width: 100%; }
   #home-header .home-content-table {
-    padding-top: 350px;
+    padding-top: 20%;
     padding-bottom: 110px; }
   #home-header .home-bottom-text-hello {
     font-family: 'MontserratB';
@@ -14643,10 +14673,10 @@ footer {
     #home-portfolio .intro:after {
       content: "";
       position: absolute;
-      bottom: -45px;
-      width: 35%;
+      bottom: -40px;
+      width: 100px;
       height: 1px;
-      background-color: #636363; }
+      background-color: rgba(99, 99, 99, 0.8); }
   #home-portfolio .portfolio-thumb {
     position: relative;
     overflow: hidden;
@@ -14661,8 +14691,8 @@ footer {
       width: 100%;
       height: 100%;
       opacity: 0;
-      -webkit-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out; }
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
       #home-portfolio .portfolio-thumb .portfolio-overlay .portfolio-item {
         text-align: center;
         padding: 30% 20px 20px; }
@@ -14708,8 +14738,8 @@ footer {
         text-transform: uppercase;
         display: block;
         text-decoration: none;
-        -webkit-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         background: transparent;
         border: 1px solid #000000; }
       #home-portfolio .filter-wrapper li a:active {

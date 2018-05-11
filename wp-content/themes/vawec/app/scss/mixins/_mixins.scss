@@ -554,7 +554,7 @@
 ///     -webkit-transition: all 0.3s ease-in;
 ///     transition: all 0.3s ease-in;
 ///   }
-@mixin transition($time: 0.3s, $timing-function: ease-in-out) {
+@mixin transition($time: 0.2s, $timing-function: ease-in-out) {
   @include prefix(transition, all $time $timing-function, 'webkit');
 }
 

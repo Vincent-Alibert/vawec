@@ -9,13 +9,11 @@
                             <div class="home-bottom-text-hello animate-intro">Hello, World.</div>
                             <h1 class="animate-intro">
                             Je suis Vincent Alibert. <br>
-                            Développeur <br>
-                            basé sur Villefranche de Lauragais, et Castelnaudary. 
+                            Développeur basé sur Villefranche de Lauragais et Castelnaudary. 
                             </h1>	
 
                             <ul class="home-section-links">
                                 <li class="animate-intro">plus <a href="#home-about" class="smoothscroll">A mon sujet</a></li>
-                                <li class="animate-intro">section <a href="#home-portfolio" class="smoothscroll">Bts SIO épreuve E4 et E6</a></li>
                                 <li class="animate-intro">Voir <a href="#portfolio" class="smoothscroll">Mes travaux</a></li>
                                 <li class="animate-intro">Contact <a href="#contact" class="smoothscroll">Par mail</a></li>								
                             </ul>
@@ -115,7 +113,7 @@
                     <h3>Voir mes derniers projets</h3>
                 </div>
                 <div class="col-12 col-lg-8 lead">
-                    <p>Retrouvez ci-dessous mes derniers projets réalisés tout de long de mon parcours professionnel.</p>
+                    <p>Retrouvez ci-dessous mes derniers projets réalisés pour le compte de divers client mais également dans le cadre de mes études.</p>
                 </div>
             </div>
             <div class="row justify-content-center">

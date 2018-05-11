@@ -1,5 +1,5 @@
 footer{
-    padding: 42px;
+    padding: 60px;
     color: $white;
     background-color: $black;
     .row{
@@ -8,20 +8,46 @@ footer{
     h2{
         @include font-size(33px);
 		@include lbB();
-		font-weight: 700;
+        font-weight: 700;
+        margin-bottom: 30px;
     }
     .social{
         margin-bottom: 50px;
         a{
-            color:$white;
             @include font-size(50px);
             @extend .col-1;
-            
+            @include transition();
+            color: $grey;
+            &:hover{
+                color:$white;
+                text-decoration: none;
+            }
         }
     }
     span{
 		color: $white;
 		@include font-size(16px);
 		@include montR();
+    }
+    #go-top{
+        @include position(fixed, $bottom: 50px, $right: 60px);
+        a{
+            @include position(relative);
+            display: block;
+            color: $grey;
+            height: 60px;
+            width: 60px;
+            background-color: $black;
+            @include font-size(35px);
+            @include transition();
+            &:hover{
+                text-decoration: none;
+                color:$white;
+            }
+        }
+        i{
+            @include position(absolute, $top: 50%, $left: 50%);
+            @include transform( translate(-50%, -50%));
+        }
     }
 }

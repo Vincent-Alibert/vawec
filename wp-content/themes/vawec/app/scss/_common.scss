@@ -20,7 +20,7 @@ body {
 
 a {
 	color: $orange;
-	@include transition (0.3s);
+	@include transition (0.2s);
 	&:visited {
 		color: $orange;
 	}
