@@ -1,17 +1,18 @@
 			<footer>
 				<div class="container">
 					<div class=" row">
-						<h2 class="col-12" >Retrouvez moi sur les réseaux sociaux</h2>
+						<h2 class="col-12" ><?php the_field('social_network_title', 'option'); ?></h2>
 						<div class="col-12 social">
-							<div class="row justify-content-center">
-								<a href="https://www.linkedin.com/in/vincent-alibert-32a06b11b/" target="_blank" ><i class="va-ion-social-linkedin"></i></a>
-								<a href="https://github.com/Vincent-Alibert" target="_blank" ><i class="va-ion-social-github"></i></a>
-								<a href="https://twitter.com/VAWECdesign" target="_blank" ><i class="va-ion-social-twitter"></i></a>
-								<a href="https://www.facebook.com/vawec/" target="_blank" ><i class="va-ion-social-facebook"></i></a>     		
+							<div class="row justify-content-center"> 
+								<?php if( have_rows('reseau_sociaux', 'option') ): ?>
+									<?php while( have_rows('reseau_sociaux', 'option') ): the_row(); ?>
+									<a href="<?php the_sub_field('lien_vers_le_reseaux_social', 'option') ?>" target="_blank" ><i class="<?php the_sub_field('choix_de_reseau_social', 'option') ?>"></i></a>
+									<?php endwhile; ?>
+								<?php endif; ?> 		
 							</div>
 						</div>
 						<div class="col-12 copyright">
-							<span>© Copyright vawec 2018.</span> 		        	         		                  
+							<span><?php the_field('copyright', 'option'); ?></span> 		        	         		                  
 						</div>		                  
 					</div>
 				</div> <!-- end container -->
@@ -24,6 +25,6 @@
 				<div id="loader"></div>
 			</div>
 		</div><!-- #page -->
-
+		<?php wp_footer(); ?>
 	</body>
 </html>

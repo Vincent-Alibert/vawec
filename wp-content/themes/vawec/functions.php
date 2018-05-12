@@ -1,8 +1,5 @@
 <?php
 /**
- * vawec functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package vawec
  */
@@ -162,3 +159,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* ACF */
+if( function_exists('acf_add_options_page') ) {
+	// Page principale
+	acf_add_options_page(array(
+		'page_title'    => 'Options',
+		'menu_title'    => 'Options',
+		'menu_slug'     => 'options-generales',
+		'capability'    => 'edit_posts',
+		'redirect'      => true
+	));
+  
+  // Deuxième sous-page
+	acf_add_options_sub_page(array(
+		'page_title'    => 'Options de Pied de Page',
+		'menu_title'    => 'Pied de page',
+		'parent_slug'   => 'options-generales',
+	));
+}

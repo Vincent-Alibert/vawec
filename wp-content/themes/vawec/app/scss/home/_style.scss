@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 804px;
+    min-height: 100vh;
     width: 100%;
     .home {
         &-content-table {
@@ -19,7 +19,7 @@
             &-hello {
                 @include montB();
                 font-weight: 700;
-                @include font-size(22px);
+                @include font-size(22px); 
                 color: rgba(red($white), green($white), blue($white), 0.35);
                 text-transform: uppercase;
                 letter-spacing: .15rem;
