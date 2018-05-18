@@ -14828,13 +14828,16 @@ footer {
         transition: all 0.2s ease-in-out;
         background: transparent;
         border: 1px solid #000000; }
-      #home-portfolio .filter-wrapper li span:active {
-        background: #000000 !important; }
-      #home-portfolio .filter-wrapper li span:hover,
-      #home-portfolio .filter-wrapper li span:focus {
-        background: #000000;
-        color: #ffffff;
-        cursor: pointer; }
+        #home-portfolio .filter-wrapper li span.selected {
+          background: #000000;
+          color: #ffffff;
+          cursor: pointer; }
+        #home-portfolio .filter-wrapper li span:active {
+          background: #000000 !important; }
+        #home-portfolio .filter-wrapper li span:hover, #home-portfolio .filter-wrapper li span:focus {
+          background: #000000;
+          color: #ffffff;
+          cursor: pointer; }
   #home-portfolio .iso-box-section {
     width: 100%; }
   #home-portfolio .iso-box-wrapper {

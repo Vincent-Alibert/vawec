@@ -221,6 +221,7 @@
         li {
             display: inline-block;
             margin: 4px;
+           
             span {
                 color: $black;
                 @include font-size(12px);
@@ -234,16 +235,21 @@
                 text-decoration: none;
                 @include transition(0.2s);
                 background: transparent;
-                border: 1px solid $black
-            }
-            span:active {
-                background: $black !important;
-            }
-            span:hover,
-            span:focus {
-                background: $black;
-                color: $white;
-                cursor: pointer;
+                border: 1px solid $black;
+                &.selected {
+                    background: $black;
+                    color: $white;
+                    cursor: pointer;
+                }
+                &:active {
+                    background: $black !important;
+                }
+                &:hover,
+                &:focus{
+                    background: $black;
+                    color: $white;
+                    cursor: pointer;
+                }
             }
         }
     }

@@ -22361,7 +22361,7 @@ window.fancybox = require("@fancyapps/fancybox");
 
 	message: {
 
-		"fr": "En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer des services adaptés à vos centres d’intérêts et réaliser des statistiques de visites.",
+		"fr-FR": "En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer des services adaptés à vos centres d’intérêts et réaliser des statistiques de visites.",
 		"en": "This website uses cookies to offer you the best possible service. By continuing to browse this site, you accept their use."
 
 	},
@@ -22370,7 +22370,7 @@ window.fancybox = require("@fancyapps/fancybox");
 
 	linkMessage: {
 
-		"fr": "En savoir plus",
+		"fr-FR": "En savoir plus",
 		"en": "Read more"
 
 	},

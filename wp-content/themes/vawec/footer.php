@@ -32,7 +32,7 @@
 		<?php wp_footer(); ?>
 	</body>
 	<script>
-	require ('initialize')
+	require ('initialize');
 	cookieWarn.init({
 			styles: {
 				"bg" : "#000000",
