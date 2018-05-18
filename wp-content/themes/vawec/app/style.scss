@@ -12,11 +12,13 @@
 
 // Animate.scss (SASS)
 @import 'properties';
-@import 'fading-entrances/fadeIn';
+@import 'fading-entrances/fadeInUp';
+@import 'fading-exits/fadeOut';
 
 // Mixins
 @import './scss/mixins/font-family';
 @import './scss/mixins/mixins';
+@import './scss/mixins/custom-animation';
 @import './scss/mixins/iconfont';
 
 

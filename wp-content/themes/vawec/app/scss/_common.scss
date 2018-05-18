@@ -23,10 +23,13 @@ a {
 	@include transition (0.2s);
 	&:visited {
 		color: $orange;
+		outline: none;
 	}
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		color: $black;
+		outline: none;
 	}
 }
 
@@ -54,5 +57,54 @@ img {
 		@include montR();
 		@include font-size(20px);
 		font-weight: 400;
+	}
+}
+.fadeInUp {
+	@include fadeInUp();
+}
+.wow {
+	visibility: hidden;
+}
+#preloader{
+	@include position(fixed, $top:0);
+	height: 100vh;
+	width: 100%;
+	z-index: 100;
+	background-color: $black;
+	#loader{
+		display: table;
+		@include position(absolute, $top: 50%, $left: 50%);
+		@include transform(translate(-50%, -50%));
+	}
+	i{
+		display: block;
+		color: $white;
+		@include font-size(50px);
+		@include loader($function:linear, $count: infinite);
+	}
+}
+#go-top{
+	@include position(fixed, $bottom: 50px, $right: 60px);
+	visibility: hidden;
+	a{
+		@include position(relative);
+		display: block;
+		color: $grey;
+		height: 60px;
+		width: 60px;
+		background-color: $black;
+		@include font-size(35px);
+		@include transition();
+		&:hover{
+			text-decoration: none;
+			color:$white;
+		}
+	}
+	i{
+		@include position(absolute, $top: 50%, $left: 50%);
+		@include transform( translate(-50%, -50%));
+	}
+	&.visible{
+		@include fadeInUp();
 	}
 }

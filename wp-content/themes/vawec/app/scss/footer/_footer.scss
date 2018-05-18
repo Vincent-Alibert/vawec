@@ -29,25 +29,4 @@ footer{
 		@include font-size(16px);
 		@include montR();
     }
-    #go-top{
-        @include position(fixed, $bottom: 50px, $right: 60px);
-        a{
-            @include position(relative);
-            display: block;
-            color: $grey;
-            height: 60px;
-            width: 60px;
-            background-color: $black;
-            @include font-size(35px);
-            @include transition();
-            &:hover{
-                text-decoration: none;
-                color:$white;
-            }
-        }
-        i{
-            @include position(absolute, $top: 50%, $left: 50%);
-            @include transform( translate(-50%, -50%));
-        }
-    }
 }

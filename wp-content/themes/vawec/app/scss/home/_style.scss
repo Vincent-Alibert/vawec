@@ -65,7 +65,7 @@
     .scroll-icon {
         @include position(absolute, $bottom: 50px, $right: 20px);
         width: 60px;
-        height: 48px;
+        height: 51px;
         @include font-size(50px);
         @include vertical($duration: 3s, $count: infinite);
         color: $white;
@@ -221,7 +221,7 @@
         li {
             display: inline-block;
             margin: 4px;
-            a {
+            span {
                 color: $black;
                 @include font-size(12px);
                 font-weight: 400;
@@ -236,13 +236,14 @@
                 background: transparent;
                 border: 1px solid $black
             }
-            a:active {
+            span:active {
                 background: $black !important;
             }
-            a:hover,
-            a:focus {
+            span:hover,
+            span:focus {
                 background: $black;
                 color: $white;
+                cursor: pointer;
             }
         }
     }

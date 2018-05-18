@@ -1,0 +1,154 @@
+@mixin scale($scale-change:1.1, $animation-properties: 1s ease-in-out) {
+    $alias: 'scale-' + str-replace($scale-change + '', '.', '-');
+  
+    @include keyframes($alias){
+      0%, 100% {
+        @include transform(scale(1));
+      }
+      50% {
+        @include transform(scale($scale-change));
+      }
+    }
+  
+    @include prefix(animation, $alias $animation-properties, 'webkit');
+  }
+  
+  
+  /// Given two opacity values, animates an element between those opacity values.
+  /// @access public
+  /// @param {Number} $fade-from [0] - The beginning opacity value.
+  /// @param {Number} $fade-to [1] - The final opacity value.
+  /// @param {List} $animation-properties [1s ease] - The animation properties to apply.
+  /// @example scss - Usage
+  ///   .foo {
+  ///     @include fade(.8, .2, 3s linear);
+  ///   }
+  /// @example css - Result
+  ///   .foo {
+  ///     -webkit-animation: fade-0-8-0-2 3s linear;
+  ///     animation: fade-0-8-0-2 3s linear;
+  ///   }
+  /// // (the @keyframes are also generated with a -webkit- vendor prefix)
+  ///   @keyframes fade-0-8-0-2 {
+  ///     from {
+  ///       opacity: 0.8;
+  ///       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  ///     }
+  ///     to {
+  ///       opacity: 0.2;
+  ///       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  ///     }
+  ///   }
+  @mixin fade($fade-from: 0, $fade-to: 1, $animation-properties: 1s ease) {
+    $alias: fade- + str-replace($fade-from + '', '.', '-') + '-' + str-replace($fade-to + '', '.', '-');
+    @include keyframes($alias){
+      from {
+        @include opacity($fade-from);
+      }
+      to {
+        @include opacity($fade-to);
+      }
+    }
+    @include prefix(animation, $alias $animation-properties, 'webkit');
+  }
+  
+  
+  /// Slide-in-from creates and calls an animation that slides an element on a given axis for a given amount of space. The offset is measured in the distance from the location the element would naturally fall in, were transforms not applied to it.
+  /// @access public
+  /// @param {String} $slide-axis [x] - The axis on which to slide; 'x' or 'y'.
+  /// @param {Length} $slide-offset [-100px] - The offset from the natural element position from which to begin the animation.
+  /// @param {List} $animation-properties [3s ease-out] - Any animation properties to be included.
+  /// @example scss - Usage
+  ///   .foo {
+  ///     @include slide-in-from(y, -200px, 3s ease alternate infinite);
+  ///   }
+  /// @example css - Result
+  ///   .foo {
+  ///     -webkit-animation: slide-in-y--200px 3s linear infinite alternate;
+  ///     animation: slide-in-y--200px 3s linear infinite alternate;
+  ///   }
+  ///
+  /// // (the @keyframes are also generated with a -webkit- vendor prefix)
+  ///   @keyframes slide-in-y--200px {
+  ///     0% {
+  ///       opacity: 0;
+  ///       -webkit-transform: translateY(-200px);
+  ///       -ms-transform: translateY(-200px);
+  ///       transform: translateY(-200px);
+  ///     }
+  ///     75% {
+  ///       -webkit-transform: translateY(0);
+  ///       -ms-transform: translateY(0);
+  ///       transform: translateY(0);
+  ///     }
+  ///     100% {
+  ///       opacity: 1;
+  ///     }
+  ///   }
+  @mixin slide-in-from($slide-axis: x, $slide-offset: -100px, $animation-properties: 3s ease-out) {
+    $slide-start: if($slide-axis == x, translateX($slide-offset), translateY($slide-offset));
+    $slide-end: if($slide-axis == x, translateX(0), translateY(0));
+  
+    @include keyframes(slide-in-#{$slide-axis}-#{$slide-offset}){
+      0% {
+        @include opacity(0);
+        @include transform($slide-start);
+      }
+      75% {
+        @include transform($slide-end);
+      }
+      100% {
+        @include opacity(1);
+      }
+    }
+  
+    @include prefix(animation, slide-in-#{$slide-axis}-#{$slide-offset} $animation-properties, 'webkit');
+  }
+  
+  // custom animate
+  @include keyframes(loader) {
+    0% {
+      @include transform(rotate(0deg));
+    }
+    100% {
+      @include transform(rotate(360deg));
+    }
+  }
+  
+  @include keyframes(vertical) {
+      0%,
+      60%,
+      80%,
+      100% {
+          @include transform(translateY(0));
+      }
+  
+      20% {
+          @include transform(translateY(-5px));
+      }
+  
+      40% {
+          @include transform(translateY(20px));
+      }
+  
+  }
+  
+  @mixin loader($animation-name: loader, $count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+    @include animation-name($animation-name);
+    @include count($count);
+    @include duration($duration);
+    @include delay($delay);
+    @include function($function);
+    @include fill-mode($fill);
+    @include visibility($visibility);
+  }
+  
+  @mixin vertical($animation-name: vertical, $count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+    @include animation-name($animation-name);
+    @include count($count);
+    @include duration($duration);
+    @include delay($delay);
+    @include function($function);
+    @include fill-mode($fill);
+    @include visibility($visibility);
+  }

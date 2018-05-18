@@ -10235,38 +10235,52 @@ a.text-dark:hover, a.text-dark:focus {
  * $fill: Especifica como uma animação CSS deve aplicar estilos ao seu destino antes e depois que ele está sendo executado. Default: both
  * $visibility: Determina se deve ser exibido ou não a parte de trás do elemento para o usuário. Default: hidden
  */
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeInUp {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
   100% {
-    opacity: 1; } }
-@keyframes fadeIn {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes fadeInUp {
   0% {
-    opacity: 0; }
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 @-webkit-keyframes loader {
   0% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6); }
-  50% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
   100% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6); } }
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @keyframes loader {
   0% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6); }
-  50% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
   100% {
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6); } }
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @-webkit-keyframes vertical {
   0%,
@@ -14429,9 +14443,11 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   a:visited {
-    color: #f0a359; }
-  a:hover, a:focus {
-    color: #000000; }
+    color: #f0a359;
+    outline: none; }
+  a:hover, a:focus, a:active {
+    color: #000000;
+    outline: none; }
 
 .intro h2 {
   text-transform: uppercase;
@@ -14455,6 +14471,100 @@ a {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400; }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+.wow {
+  visibility: hidden; }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  background-color: #000000; }
+  #preloader #loader {
+    display: table;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #preloader i {
+    display: block;
+    color: #ffffff;
+    font-size: 50px;
+    font-size: 3.125rem;
+    -webkit-animation-name: loader;
+            animation-name: loader;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+
+#go-top {
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+  visibility: hidden; }
+  #go-top a {
+    position: relative;
+    display: block;
+    color: #636363;
+    height: 60px;
+    width: 60px;
+    background-color: #000000;
+    font-size: 35px;
+    font-size: 2.1875rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    #go-top a:hover {
+      text-decoration: none;
+      color: #ffffff; }
+  #go-top i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #go-top.visible {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
 
 html {
   -moz-osx-font-smoothing: grayscale;
@@ -14494,30 +14604,6 @@ footer {
     font-size: 16px;
     font-size: 1rem;
     font-family: 'MontserratR'; }
-  footer #go-top {
-    position: fixed;
-    right: 60px;
-    bottom: 50px; }
-    footer #go-top a {
-      position: relative;
-      display: block;
-      color: #636363;
-      height: 60px;
-      width: 60px;
-      background-color: #000000;
-      font-size: 35px;
-      font-size: 2.1875rem;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      footer #go-top a:hover {
-        text-decoration: none;
-        color: #ffffff; }
-    footer #go-top i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
 
 #home-header {
   position: relative;
@@ -14579,7 +14665,7 @@ footer {
     right: 20px;
     bottom: 50px;
     width: 60px;
-    height: 48px;
+    height: 51px;
     font-size: 50px;
     font-size: 3.125rem;
     -webkit-animation-name: vertical;
@@ -14726,7 +14812,7 @@ footer {
     #home-portfolio .filter-wrapper li {
       display: inline-block;
       margin: 4px; }
-      #home-portfolio .filter-wrapper li a {
+      #home-portfolio .filter-wrapper li span {
         color: #000000;
         font-size: 12px;
         font-size: 0.75rem;
@@ -14742,12 +14828,13 @@ footer {
         transition: all 0.2s ease-in-out;
         background: transparent;
         border: 1px solid #000000; }
-      #home-portfolio .filter-wrapper li a:active {
+      #home-portfolio .filter-wrapper li span:active {
         background: #000000 !important; }
-      #home-portfolio .filter-wrapper li a:hover,
-      #home-portfolio .filter-wrapper li a:focus {
+      #home-portfolio .filter-wrapper li span:hover,
+      #home-portfolio .filter-wrapper li span:focus {
         background: #000000;
-        color: #ffffff; }
+        color: #ffffff;
+        cursor: pointer; }
   #home-portfolio .iso-box-section {
     width: 100%; }
   #home-portfolio .iso-box-wrapper {

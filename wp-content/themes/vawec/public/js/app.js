@@ -148,37 +148,88 @@ var __makeRelativeRequire = function(require, mappings, pref) {
   }
 };
 require.register("initialize.js", function(exports, require, module) {
-function sameHeight(element){
-  var height = 0;
-  $(element).css('height' , '');
-  $(element).each(function(){
-    var maxHeight = $(this).height();
-    if(maxHeight > height) {
-      height = maxHeight;
-    }
+function loaderEnd() {
+  $("#loader").fadeOut(400, function () {
+    $("#preloader").delay(300).fadeOut(400);
   });
-  $(element).css('height', height);
 }
 
-function sameHeightByRow(){
-  var arrayData = $('.list-albums');
-  var height = 0;
-  for (var i = 0; i <= arrayData.length - 1; i++) {
-    for (var j = 0; j <= arrayData[i].children.length - 1; j++) {
-      $(arrayData[i].children[j]).children('.picture').children('.atm-link').each(function() {
-        if( $(this).outerHeight() > height) {
-          height = $(this).outerHeight();
-        }
-      });
-    }
-    
-    $(arrayData[i].children).children('.picture').children('.atm-link').css('height', height);
-    height = 0;
+function smoothscroll() {
+  $('.smoothscroll').on("click", function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 500);
+  });
+}
+
+function showGoToTop() {
+  if ($(document).scrollTop() < 300) {
+    $('#go-top').removeClass('visible');
+  }
+  if ($(document).scrollTop() > 300) {
+    $('#go-top').addClass('visible');
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function initializeIsotop() {
+  if ($('.iso-box-wrapper').length > 0) {
 
+    var $container = $('.iso-box-wrapper');
+    $('.grid').isotope({
+      // options
+      itemSelector: '.iso-box',
+      layoutMode: 'fitRows'
+    });
+
+    //filter items on button click
+
+    $('.filter-wrapper li span').click(function () {
+      
+      var $this = $(this);
+      var filterValue = $this.attr('data-filter');
+
+      $container.isotope({
+        filter: filterValue,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false,
+        }
+      });
+
+      // don't proceed if already selected 
+
+      if ($this.hasClass('selected')) {
+        return false;
+      }
+
+      var filter_wrapper = $this.closest('.filter-wrapper');
+      filter_wrapper.find('.selected').removeClass('selected');
+      $this.addClass('selected');
+
+      return false;
+    });
+
+  }
+
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  $(document).ready(function () {
+    smoothscroll();
+  });
+
+  $(window).on('load', function () {
+    loaderEnd();
+    initializeIsotop();
+    new WOW().init();
+  });
+
+  $(document).on('scroll', function () {
+    showGoToTop();
+  });
 });
 
 });
