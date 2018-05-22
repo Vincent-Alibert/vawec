@@ -176,4 +176,9 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'    => 'Pied de page',
 		'parent_slug'   => 'options-generales',
 	));
+	acf_add_options_sub_page(array(
+		'page_title'    => '404',
+		'menu_title'    => '404',
+		'parent_slug'   => 'options-generales',
+	));
 }

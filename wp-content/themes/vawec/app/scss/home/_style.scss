@@ -141,6 +141,10 @@
                     &.va-ion-social-angular {
                         margin-right: -13px;
                     }
+                    &.va-uniF247{
+                        @include font-size(40px);
+                        margin-right: -3px;
+                    }
                 }
             }
         }

@@ -2,22 +2,38 @@ footer{
     padding: 60px;
     color: $white;
     background-color: $black;
+    @include media-breakpoint-down(md) {
+        padding: 50px 20px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 40px 20px;
+    }
     .row{
         @extend .text-center;
     }
     h2{
-        @include font-size(33px);
 		@include lbB();
         font-weight: 700;
         margin-bottom: 30px;
+        @include font-size(33px);
+		@include media-breakpoint-down(md) {
+			@include font-size(30px);
+		}
+		@include media-breakpoint-down(sm) {
+			@include font-size(24px);
+		}
     }
     .social{
         margin-bottom: 50px;
         a{
+            @extend .col-2;
+            @extend .col-md-1;
             @include font-size(50px);
-            @extend .col-1;
             @include transition();
             color: $grey;
+            @include media-breakpoint-down(sm) {
+                @include font-size(45px);
+            }
             &:hover{
                 color:$white;
                 text-decoration: none;
@@ -27,6 +43,12 @@ footer{
     span{
 		color: $white;
 		@include font-size(16px);
-		@include montR();
+        @include montR();
+        @include media-breakpoint-down(md) {
+            @include font-size(15px);
+        }
+        @include media-breakpoint-down(sm) {
+            @include font-size(14px);
+        }
     }
 }

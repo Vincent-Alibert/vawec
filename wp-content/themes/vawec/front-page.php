@@ -160,7 +160,8 @@ get_header(); ?>
                                                 <img src="<?php echo $url ?>"  alt="<?php echo $alt ?>">
                                                 <div class="portfolio-overlay">
                                                     <div class="portfolio-item">
-                                                        <a href="single-project.html">
+                                                    <?php $doc = get_field('boolean_documentation'); ?>
+                                                        <a href="<?php ($doc) ? the_field('link_documentation') : the_field('link_site'); ?>" target="_blank">
                                                             <i class="fa va-uniF0C6"></i>
                                                         </a>
                                                         <h2><?php echo get_the_title(); ?></h2>
