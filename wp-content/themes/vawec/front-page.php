@@ -19,14 +19,13 @@ get_header(); ?>
                             <ul class="home-section-links">
                                 <li class="wow fadeInUp" data-wow-delay="0.7s"><?php _e('plus', 'vawec' ); ?> <a href="#home-about" class="smoothscroll"><?php _e('A mon sujet', 'vawec' ); ?></a></li>
                                 <li class="wow fadeInUp" data-wow-delay="0.9s"><?php _e('Voir', 'vawec' ); ?> <a href="#home-portfolio" class="smoothscroll"><?php _e('Mes travaux', 'vawec' ); ?></a></li>
-                                <li class="wow fadeInUp" data-wow-delay="1.1s"><?php _e('Contact', 'vawec' ); ?> <a href="<?php bloginfo( 'url' ); ?>/contact" class="smoothscroll"><?php _e('Par mail', 'vawec' ); ?></a></li>								
+                                <!--<li class="wow fadeInUp" data-wow-delay="1.1s"><?php _e('Contact', 'vawec' ); ?> <a href="<?php // bloginfo( 'url' ); ?>/contact" ><?php _e('Par mail', 'vawec' ); ?></a></li> -->								
                             </ul>
                         </div> <!-- end home-bottom-text -->
                     </div> <!-- end home-header-content --> 
                 </div> <!-- end row --> 
             </div> <!-- end home-content-tablecell --> 		   
         </div> <!-- end home-content-table -->
-
         <a href="#home-about" class="scroll-icon smoothscroll">		
             <i class="va-ion-ios-arrow-thin-down wow fadeInUp" data-wow-delay="1.3s"></i>
         </a>	
@@ -43,7 +42,6 @@ get_header(); ?>
                             <div class="intro">
                                 <h2 class="wow fadeInUp" data-wow-offset="100"><?php the_field('titre_about'); ?></h2>
                                 <h3 class="wow fadeInUp" data-wow-offset="100"><?php the_field('sous-titre_about'); ?></h3>
-
                                 <p class="lead wow fadeInUp" data-wow-offset="100"><?php the_field('lead_about'); ?></p>					
                             </div> 
                             <div class="wow fadeInUp" data-wow-offset="100">
@@ -55,7 +53,7 @@ get_header(); ?>
                                     endif;
                                 ?>
                             </div>  		
-                            <a href="<?php bloginfo( 'url' ); ?>/contact" id="btn-contact" class="button wow fadeInUp" data-wow-offset="100"><?php the_field('bouton_contact_about'); ?></a>
+                            <!--<a href="<?php // bloginfo( 'url' ); ?>/contact" id="btn-contact" class="button wow fadeInUp" data-wow-offset="100"><?php the_field('bouton_contact_about'); ?></a> -->
                             <?php if( get_field('cv_about') ): ?>
 	                            <a href="<?php the_field('cv_about'); ?>" id="btn-cv" class="button wow fadeInUp" data-wow-offset="100" target="_blank"><?php the_field('bouton_cv_about'); ?></a>
                             <?php endif; ?>

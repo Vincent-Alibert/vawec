@@ -14861,6 +14861,22 @@ button.hamburger {
         color: #ffffff;
         text-decoration: none; }
 
+body.page {
+  background: #EBEBEB;
+  background-attachment: fixed;
+  background-position: center center; }
+  body.page header {
+    background-color: #ffffff;
+    position: relative;
+    margin-top: 100px;
+    padding: 125px 0; }
+    body.page header #header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
 #not-found {
   background-image: url("../img/404.jpg");
   background-repeat: no-repeat;

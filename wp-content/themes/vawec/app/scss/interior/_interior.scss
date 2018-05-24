@@ -1,0 +1,15 @@
+body.page{
+    background: $greyL;
+    background-attachment: fixed;
+    background-position: center center;
+    header{
+        background-color: $white;
+        @include position(relative);
+        margin-top: 100px;
+        padding: 125px 0;
+        #header{
+            @include position(absolute, $top: 50%, $left: 50%);
+            @include transform(translate(-50%, -50%));
+        }
+    }
+}
