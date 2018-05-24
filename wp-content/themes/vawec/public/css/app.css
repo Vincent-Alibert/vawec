@@ -14640,8 +14640,8 @@ a {
           animation-name: fadeInUp;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   -webkit-animation-timing-function: ease;

@@ -170,7 +170,7 @@ img {
 
 // animation
 .fadeInUp {
-	@include fadeInUp();
+	@include fadeInUp($duration: 0.8s);
 }
 
 .wow {
