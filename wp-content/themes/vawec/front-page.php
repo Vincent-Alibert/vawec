@@ -39,7 +39,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-12 col-md-6" id="about-profile">
                     <div class="row">
-                        <div class="col-12 col-md-8 offset-md-3">
+                        <div class="col-12 col-md-10 offset-md-1 col-lg-9 offset-lg-2 col-xl-8 offset-xl-3">
                             <div class="intro">
                                 <h2 class="wow fadeInUp" data-wow-offset="100"><?php the_field('titre_about'); ?></h2>
                                 <h3 class="wow fadeInUp" data-wow-offset="100"><?php the_field('sous-titre_about'); ?></h3>
@@ -64,7 +64,7 @@ get_header(); ?>
                 </div>    
                 <div class="col-12 col-md-6" id="about-service">
                     <div class="row">
-                        <div class="col-12 col-md-8 offset-md-1">
+                        <div class="col-12 col-md-10 offset-md-1 col-lg-9 col-xl-8">
                             <div class="intro">
                                 <h2 class="wow fadeInUp" data-wow-offset="100"><?php the_field('titre_service'); ?></h2>
                                 <h3 class="wow fadeInUp" data-wow-offset="100"><?php the_field('sous-titre_service'); ?></h3>

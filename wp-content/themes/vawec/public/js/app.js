@@ -185,7 +185,7 @@ function initializeIsotop() {
     //filter items on button click
 
     $('.filter-wrapper li span').click(function () {
-      
+
       var $this = $(this);
       var filterValue = $this.attr('data-filter');
 
@@ -215,10 +215,45 @@ function initializeIsotop() {
 
 }
 
+function openCloseNav() {
+  var button = $('button.hamburger');
+  var nav = $('nav#nav');
+  var html = $('html');
+  var elements = $('nav #elements');
+  var socialLink = $('nav .social a');
+  var delayLinkSocial = 8;
+  var unitDelay = 0;
+
+  socialLink.each(function () {
+    if (delayLinkSocial < 10) {
+      $(this).css({
+        '-webkit-animation-delay': '0.' + delayLinkSocial + 's',
+        'animation-delay': '0.' + delayLinkSocial + 's'
+      });
+    } else {
+      unitDelay = unitDelay + (delayLinkSocial - 10);
+      $(this).css({
+        '-webkit-animation-delay': '1.' + unitDelay + 's',
+        'animation-delay': '1.' + unitDelay + 's'
+      });
+    }
+    delayLinkSocial++;
+  });
+
+  button.on('click', function (event) {
+    event.preventDefault;
+    button.toggleClass('is-active');
+    nav.toggleClass('open');
+    nav.toggleClass('close');
+    html.toggleClass('open');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
   $(document).ready(function () {
     smoothscroll();
+    openCloseNav();
   });
 
   $(window).on('load', function () {
@@ -231,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function () {
     showGoToTop();
   });
 });
-
 });
 
 require.register("___globals___", function(exports, require, module) {

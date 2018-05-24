@@ -10,6 +10,12 @@ body {
 	height: 100%;
 }
 
+html{
+	&.open{
+		overflow: hidden;
+	}
+}
+
 body {
 	@include lbR();
 	color: $mainBlue;
@@ -20,7 +26,7 @@ body {
 	@include media-breakpoint-down(md) {
 		@include font-size(15px);
 	}
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(xs) {
 		@include font-size(14px);
 	}
 }
@@ -142,10 +148,7 @@ img {
 	h3 {
 		@include font-size(33px);
 		@include media-breakpoint-down(md) {
-			@include font-size(30px);
-		}
-		@include media-breakpoint-down(sm) {
-			@include font-size(27px);
+			@include font-size(26px);
 		}
 		@include lbB();
 		font-weight: 700;
@@ -165,6 +168,7 @@ img {
 	}
 }
 
+// animation
 .fadeInUp {
 	@include fadeInUp();
 }
@@ -195,6 +199,9 @@ img {
 #go-top {
 	@include position(fixed, $bottom: 50px, $right: 60px);
 	visibility: hidden;
+	@include media-breakpoint-down(sm) {
+		right: 20px;
+	}
 	a {
 		@include position(relative);
 		display: block;

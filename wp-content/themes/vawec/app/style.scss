@@ -12,8 +12,10 @@
 
 // Animate.scss (SASS)
 @import 'properties';
+@import 'fading-entrances/fadeIn';
 @import 'fading-entrances/fadeInUp';
 @import 'fading-exits/fadeOut';
+@import 'fading-exits/fadeOutUpBig';
 
 // Mixins
 @import './scss/mixins/font-family';
@@ -34,6 +36,7 @@
 
 // Import specific pages style
 @import './scss/header/header';
+@import './scss/interior/nav';
 @import './scss/interior/interior';
 @import './scss/interior/404';
 @import './scss/footer/footer';

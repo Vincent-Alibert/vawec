@@ -1,0 +1,92 @@
+button.hamburger {
+    @include position(fixed, $top: 20px, $left:20px);
+    z-index: 1001;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    .hamburger-inner {
+        background-color: $white;
+        @include transition();
+        &:before,
+        &:after {
+            background-color: $white;
+            @include transition();
+        }
+    }
+}
+
+#nav {
+    @include position(fixed, $top: 0, $left:0);
+    z-index: 1000;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(red($black), green($black), blue($black), 1);
+    padding-top: 50px;
+    &.close {
+        background-color: rgba(red($black), green($black), blue($black), 1);
+        display: none;
+    }
+    &.open {
+        display: block;
+        img {
+            @include fadeInUp($delay: 0.3s);
+        }
+        a {
+            @include fadeIn($delay: 0.5s);
+        }
+        .social a {
+            @include fadeInUp();
+        }
+    }
+    .container {
+        @include position(relative);
+        min-height: 90vh;
+    }
+    &-logo {
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 90px;
+        }
+    }
+    #elements {
+        @include position(absolute, $top: 50%);
+        @include transform(translateY(-50%));
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: $white;
+            text-transform: uppercase;
+            @include montR();
+        }
+    }
+    .social {
+        @include position(absolute, $bottom: 50px);
+        @extend .w-100;
+        a {
+            @extend .col-2;
+            @extend .col-md-1;
+            @include font-size(50px);
+            @include transition();
+            color: $grey;
+            @include media-breakpoint-down(sm) {
+                @include font-size(45px);
+            }
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}

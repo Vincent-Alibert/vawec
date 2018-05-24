@@ -3,27 +3,43 @@
     background-color: $black-2;
     background: linear-gradient(to left, rgba(red($black), green($black), blue($black), 1) 0%, rgba(red($black), green($black), blue($black), 0.7) 10%, rgba(red($black), green($black), blue($black), 0.4) 100%), url(../img/intro-bg.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center, center right;
     background-size: cover;
-    min-height: 100vh;
     width: 100%;
     .home {
         &-content-table {
-            padding-top: 20%;
-            padding-bottom: 110px;
+            padding-top: 340px;
+            padding-bottom: 130px;
+            @include media-breakpoint-down(xxl) {
+                padding-top: 200px;
+                padding-bottom: 110px;
+            }
+            @include media-breakpoint-down(md) {
+                padding-bottom: 80px;
+            }
         }
         &-header-content {
-            @extend .col-10;
+            @extend .col-12;
+            @extend .col-lg-10;
         }
         &-bottom-text {
             &-hello {
                 @include montB();
                 font-weight: 700;
-                @include font-size(22px); 
+                @include font-size(22px);
                 color: rgba(red($white), green($white), blue($white), 0.35);
                 text-transform: uppercase;
                 letter-spacing: .15rem;
                 margin: 0 0 0 .3rem;
+                @include media-breakpoint-down(lg) {
+                    @include font-size(20px);
+                }
+                @include media-breakpoint-down(md) {
+                    @include font-size(18px);
+                }
+                @include media-breakpoint-down(sm) {
+                    @include font-size(16px);
+                }
             }
         }
         &-section-links {
@@ -41,6 +57,13 @@
                 color: rgba(red($white), green($white), blue($white), 0.35);
                 margin-right: 1.5rem;
                 margin-bottom: .6rem;
+                @include media-breakpoint-down(lg) {
+                    @include font-size(13px);
+                }
+                @include media-breakpoint-down(sm) {
+                    @include font-size(12px);
+                    margin-right: 18px;
+                }
             }
             a {
                 @include lbR();
@@ -49,6 +72,12 @@
                 letter-spacing: 0;
                 color: $white;
                 margin-left: .3rem;
+                @include media-breakpoint-down(lg) {
+                    @include font-size(17px);
+                }
+                @include media-breakpoint-down(sm) {
+                    @include font-size(16px);
+                }
                 &:hover {
                     text-decoration: none;
                 }
@@ -61,9 +90,21 @@
         line-height: 1.4;
         color: $white;
         font-weight: 700;
+        @include media-breakpoint-down(lg) {
+            @include font-size(45px);
+        }
+        @include media-breakpoint-down(md) {
+            @include font-size(39px);
+        }
+        @include media-breakpoint-down(sm) {
+            @include font-size(34px);
+        }
+        @include media-breakpoint-down(xs) {
+            @include font-size(28px);
+        }
     }
     .scroll-icon {
-        @include position(absolute, $bottom: 50px, $right: 20px);
+        @include position(absolute, $bottom: 60px, $right: 20px);
         width: 60px;
         height: 51px;
         @include font-size(50px);
@@ -72,6 +113,9 @@
         z-index: 4;
         &:hover {
             text-decoration: none;
+        }
+        @include media-breakpoint-down(sm) {
+            bottom: 40px;
         }
     }
 }
@@ -82,11 +126,24 @@
         &-service {
             padding-top: 110px;
             padding-bottom: 110px;
+            @include media-breakpoint-down(md) {
+                padding-top: 85px;
+                padding-bottom: 85px;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            @include media-breakpoint-down(xs) {
+                padding-top: 55px;
+                padding-bottom: 55px;
+            }
         }
         &-profile {
             background: linear-gradient(to top, rgba(red($greyL), green($greyL), blue($greyL), 0.7), rgba(red($greyL), green($greyL), blue($greyL), 0.7)), url(../img/profile-bg.jpg);
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center, center right;
             a {
                 &.button {
                     @extend .d-block;
@@ -98,6 +155,13 @@
                     @include montB();
                     letter-spacing: 2px;
                     font-weight: 400;
+                    @include media-breakpoint-down(sm) {
+                        max-width: 50% !important;
+                        margin: auto;
+                    }
+                    @include media-breakpoint-down(xs) {
+                        max-width: 100% !important;
+                    }
                 }
                 &#btn-contact {
                     color: $black;
@@ -138,12 +202,18 @@
                 }
                 i {
                     @include font-size(55px);
+                    @include media-breakpoint-only(md) {
+                        @include font-size(44px);
+                    }
                     &.va-ion-social-angular {
                         margin-right: -13px;
                     }
-                    &.va-uniF247{
+                    &.va-uniF247 {
                         @include font-size(40px);
                         margin-right: -3px;
+                        @include media-breakpoint-only(md) {
+                            @include font-size(30px);
+                        }
                     }
                 }
             }
@@ -159,27 +229,60 @@
     padding-top: 120px;
     padding-bottom: 150px;
     background: $greyL;
+    @include media-breakpoint-down(md) {
+        padding-top: 85px;
+        padding-bottom: 110px;
+    }
     .intro {
         margin-bottom: 100px;
+        @include position(relative);
+        @include media-breakpoint-down(md) {
+            margin-bottom: 60px;
+        }
         h2 {
             @include font-size(20px);
+            @include media-breakpoint-down(md) {
+                @include font-size(18px);
+            }
+            @include media-breakpoint-down(sm) {
+                @include font-size(17px);
+            }
+            @include media-breakpoint-down(xs) {
+                @include font-size(16px);
+            }
         }
         h3 {
             @include font-size(48px);
+            @include media-breakpoint-down(md) {
+                @include font-size(38px);
+            }
+            @include media-breakpoint-down(sm) {
+                @include font-size(33px);
+            }
+            @include media-breakpoint-down(xs) {
+                @include font-size(28px);
+            }
         }
-        @include position(relative);
         &:after {
             content: "";
             @include position(absolute, $bottom: -40px);
             width: 100px;
             height: 1px;
             background-color: rgba(red($grey), green($grey), blue($grey), 0.8);
+            @include media-breakpoint-down(md) {
+                bottom: -20px;
+            }
         }
     }
     .portfolio-thumb {
         @include position(relative);
         overflow: hidden;
         margin: 0;
+        img{
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+            }
+        }
         .portfolio-overlay {
             background: $black-2;
             @include position (absolute, $top: 0, $right:0, $bottom:0, $left:0);
@@ -190,12 +293,14 @@
             .portfolio-item {
                 text-align: center;
                 padding: 30% 20px 20px;
+                @include media-breakpoint-between(sm, md) {
+                    padding: 20% 15px 20px;
+                }
             }
             .fa {
                 background: $white;
                 border-radius: 100px;
                 color: $black-2;
-                @include font-size(20px);
                 display: inline-block;
                 width: 3.5rem;
                 height: 3.5rem;
@@ -203,12 +308,19 @@
                 text-align: center;
                 text-decoration: none;
                 margin-bottom: 20px;
+                @include font-size(20px);
             }
             h2 {
                 color: $white;
                 text-transform: uppercase;
                 @include montB();
                 @include font-size(20px);
+                @include media-breakpoint-down(md) {
+                    @include font-size(16px);
+                }
+                @include media-breakpoint-down(xs) {
+                    @include font-size(14px);
+                }
             }
         }
         &:hover .portfolio-overlay {
@@ -222,10 +334,12 @@
         overflow: hidden;
         padding: 0;
         margin-left: 0;
+        @include media-breakpoint-down(xs) {
+            padding: 0 15px;
+        }
         li {
             display: inline-block;
             margin: 4px;
-           
             span {
                 color: $black;
                 @include font-size(12px);
@@ -249,7 +363,7 @@
                     background: $black !important;
                 }
                 &:hover,
-                &:focus{
+                &:focus {
                     background: $black;
                     color: $white;
                     cursor: pointer;
@@ -258,20 +372,20 @@
         }
     }
     /*isotope box css*/
-    .iso-box-section {
-        width: 100%;
-    }
-    .iso-box-wrapper {
-        width: 100%;
-        padding: 0;
-        @include position(relative);
-        margin: 0 auto;
-    }
     .iso-box {
         @include position(relative);
         min-height: 50px;
         overflow: hidden;
         margin-bottom: 25px;
+        &-section {
+            width: 100%;
+        }
+        &-wrapper {
+            width: 100%;
+            padding: 0;
+            @include position(relative);
+            margin: 0 auto;
+        }
     }
     .iso-box>a {
         display: block;
@@ -284,3 +398,4 @@
         display: block;
     }
 }
+

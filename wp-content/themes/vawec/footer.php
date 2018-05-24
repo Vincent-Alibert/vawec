@@ -21,7 +21,7 @@
 			</footer>
 
 			<div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#top"><i class="va-ion-ios-arrow-thin-up"></i></a>
+				<a class="smoothscroll" title="Back to Top" href="#nav"><i class="va-ion-ios-arrow-thin-up"></i></a>
 			</div>		
 			<div id="preloader"> 
 				<div id="loader">
